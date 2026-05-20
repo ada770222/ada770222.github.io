@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#0c2038"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8d8e8"/>
+      <stop offset="50%" stop-color="#eef4f8"/>
+      <stop offset="100%" stop-color="#a8c0d0"/>
+    </linearGradient>
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#80c0dc"/>
+      <stop offset="100%" stop-color="#4a90b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad)"/>
+  <!-- Accent ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#blueAccent)" stroke-width="4"/>
+
+  <!-- Hexagon ring -->
+  <polygon points="100,22 170,62 170,138 100,178 30,138 30,62"
+    fill="none" stroke="#4a90b8" stroke-width="2.5" opacity="0.5"/>
+
+  <!-- I-beam icon -->
+  <g transform="translate(100,100)">
+    <!-- Top flange -->
+    <rect x="-38" y="-50" width="76" height="14" rx="2" fill="url(#silverGrad)"/>
+    <!-- Web -->
+    <rect x="-11" y="-36" width="22" height="72" rx="2" fill="url(#silverGrad)"/>
+    <!-- Bottom flange -->
+    <rect x="-38" y="36" width="76" height="14" rx="2" fill="url(#silverGrad)"/>
+    <!-- Diamond accent -->
+    <rect x="-9" y="-9" width="18" height="18" rx="2" fill="url(#blueAccent)" transform="rotate(45)"/>
+  </g>
+</svg>

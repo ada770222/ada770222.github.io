@@ -115,6 +115,14 @@ section{padding:80px 5%;}
 footer{background:var(--steel);color:rgba(255,255,255,0.6);text-align:center;padding:32px 5%;font-size:13px;}
 footer strong{color:#fff;}
 
+/* Floating LINE button */
+.line-float{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:8px;background:#06c755;color:#fff;padding:12px 18px 12px 14px;border-radius:50px;box-shadow:0 6px 20px rgba(6,199,85,0.4);text-decoration:none;font-weight:600;font-size:14px;transition:transform 0.2s,box-shadow 0.2s;}
+.line-float:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(6,199,85,0.55);}
+.line-float-icon{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#06c755;font-weight:800;font-size:13px;letter-spacing:-0.5px;}
+@media(max-width:768px){
+  .line-float{padding:10px 14px 10px 12px;font-size:13px;right:14px;bottom:14px;}
+}
+
 @media(max-width:768px){
   .about-grid,.contact-grid,.map-grid{grid-template-columns:1fr;}
   .nav-links{display:none;}
@@ -303,9 +311,13 @@ footer strong{color:#fff;}
         <a class="contact-cta" href="tel:053708311">📞 撥打二廠電話</a>
       </div>
     </div>
-    <div style="background:var(--gray-light);border-radius:8px;padding:20px 28px;margin-top:16px;border:1px solid var(--gray-mid);display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+    <div style="background:var(--gray-light);border-radius:8px;padding:20px 28px;margin-top:16px;border:1px solid var(--gray-mid);display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
       <span style="font-size:15px;color:var(--text-mid);">📧 服務信箱</span>
       <a href="mailto:service@ssm-steel.com.tw" style="color:var(--orange);font-size:16px;font-weight:500;text-decoration:none;">service@ssm-steel.com.tw</a>
+      <span style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;">
+        <span style="font-size:15px;color:var(--text-mid);">LINE 諮詢</span>
+        <a href="https://lin.ee/8VTlXCD"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>
+      </span>
     </div>
     <div class="map-grid">
       <div class="map-card">
@@ -319,6 +331,12 @@ footer strong{color:#fff;}
     </div>
   </div>
 </section>
+
+<!-- Floating LINE button -->
+<a class="line-float" href="https://lin.ee/8VTlXCD" target="_blank" rel="noopener" aria-label="加入 LINE 好友">
+  <span class="line-float-icon">LINE</span>
+  <span>即時諮詢</span>
+</a>
 
 <footer>
   <p>© 2026 <strong>尚新貿鋼鐵有限公司 Sun Sing Mow Steel Co., Ltd.</strong> All Rights Reserved.</p>
