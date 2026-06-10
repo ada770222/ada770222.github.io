@@ -5,8 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>尚新貿鋼鐵有限公司</title>
 <meta name="description" content="尚新貿鋼鐵有限公司，嘉義朴子在地深耕三十年。提供不鏽鋼板、中厚鐵板、H型鋼等多元鋼材，整合30kW高功率雷射切割、電離子切割、折彎、沖孔等加工服務。客製化圖面加工，歡迎來電詢價：05-3707475。">
+<link rel="canonical" href="https://www.ssm-steel.com.tw/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="alternate icon" href="favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ssm-steel.com.tw/">
+<meta property="og:title" content="尚新貿鋼鐵有限公司｜嘉義朴子鋼材加工">
+<meta property="og:description" content="嘉義朴子在地深耕三十年，提供不鏽鋼板、中厚鐵板、H型鋼等多元鋼材，整合30kW雷射切割、電離子切割、折彎、沖孔等加工服務。">
+<meta property="og:image" content="https://www.ssm-steel.com.tw/photos/Banner.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="尚新貿鋼鐵有限公司">
+<!-- Hero image preload -->
+<link rel="preload" as="image" href="photos/Banner.jpg">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- LocalBusiness JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "尚新貿鋼鐵有限公司",
+  "alternateName": "Sun Sing Mow Steel Co., Ltd.",
+  "description": "嘉義朴子在地深耕三十年，提供不鏽鋼板、中厚鐵板、H型鋼等多元鋼材，整合30kW高功率雷射切割、電離子切割、折彎、沖孔等加工服務。",
+  "url": "https://www.ssm-steel.com.tw/",
+  "logo": "https://www.ssm-steel.com.tw/favicon.svg",
+  "image": "https://www.ssm-steel.com.tw/photos/Banner.jpg",
+  "email": "service@ssm-steel.com.tw",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "大鄉里大槺榔1070巷40弄9號",
+    "addressLocality": "朴子市",
+    "addressRegion": "嘉義縣",
+    "postalCode": "613",
+    "addressCountry": "TW"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 23.466425,
+    "longitude": 120.265269
+  },
+  "telephone": "+886-5-3707475",
+  "faxNumber": "+886-5-3703575",
+  "openingHours": "Mo-Fr 08:00-17:30",
+  "sameAs": ["https://lin.ee/8VTlXCD"]
+}
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -126,9 +174,24 @@ footer strong{color:#fff;}
   .line-float{padding:10px 14px 10px 12px;font-size:13px;right:14px;bottom:14px;}
 }
 
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform 0.25s,opacity 0.25s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
 @media(max-width:768px){
   .about-grid,.contact-grid,.map-grid{grid-template-columns:1fr;}
-  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .nav-links{
+    display:none;flex-direction:column;gap:0;
+    position:absolute;top:64px;left:0;right:0;
+    background:rgba(26,35,50,0.98);
+    padding:0;list-style:none;
+  }
+  .nav-links.open{display:flex;}
+  .nav-links li a{display:block;padding:14px 5%;border-bottom:1px solid rgba(255,255,255,0.07);font-size:15px;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
   .hero-stats{gap:28px;}
 }
@@ -147,6 +210,9 @@ footer strong{color:#fff;}
       <li><a href="#contact">聯絡我們</a></li>
     </ul>
     <a class="nav-cta" href="tel:053707475">立即詢價</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="開啟選單" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -194,7 +260,7 @@ footer strong{color:#fff;}
         </div>
       </div>
       <div class="about-photo">
-        <img src="photos/公司外牆看板.jpg" alt="尚新貿鋼鐵公司外牆看板">
+        <img src="photos/公司外牆看板.jpg" alt="尚新貿鋼鐵公司外牆看板" loading="lazy">
       </div>
     </div>
   </div>
@@ -208,27 +274,27 @@ footer strong{color:#fff;}
     <p class="section-desc">提供多元鋼材品項，滿足各類工業建築與製造需求。</p>
     <div class="products-grid">
       <div class="product-card">
-        <div class="product-img"><img src="photos/不鏽鋼板.jpg" alt="不鏽鋼板"></div>
+        <div class="product-img"><img src="photos/不鏽鋼板.jpg" alt="不鏽鋼板" loading="lazy"></div>
         <div class="product-info"><div class="product-name">不鏽鋼板</div><div class="product-desc">耐蝕性優異，適用食品、化工、建築等多元場合</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/中厚鐵板1.jpg" alt="中厚鐵板"></div>
+        <div class="product-img"><img src="photos/中厚鐵板1.jpg" alt="中厚鐵板" loading="lazy"></div>
         <div class="product-info"><div class="product-name">中厚鐵板</div><div class="product-desc">強度高、用途廣，適合結構件與機械底座製作</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/白鐵鋼捲.jpg" alt="白鐵鋼捲"></div>
+        <div class="product-img"><img src="photos/白鐵鋼捲.jpg" alt="白鐵鋼捲" loading="lazy"></div>
         <div class="product-info"><div class="product-name">鍍鋅鋼板</div><div class="product-desc">防鏽處理優良，廣泛應用於建築外牆及設備外殼</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/圓管.jpg" alt="圓管"></div>
+        <div class="product-img"><img src="photos/圓管.jpg" alt="圓管" loading="lazy"></div>
         <div class="product-info"><div class="product-name">圓管 / 方管</div><div class="product-desc">多規格尺寸，適用結構、機械及各類製造工程</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/白鐵角鐵.jpg" alt="白鐵角鐵"></div>
+        <div class="product-img"><img src="photos/白鐵角鐵.jpg" alt="白鐵角鐵" loading="lazy"></div>
         <div class="product-info"><div class="product-name">白鐵角鐵 / 小型鋼</div><div class="product-desc">角鐵、槽鐵、扁鐵、圓棒，滿足各類輔助結構需求</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/菱形網.jpg" alt="菱形網"></div>
+        <div class="product-img"><img src="photos/菱形網.jpg" alt="菱形網" loading="lazy"></div>
         <div class="product-info"><div class="product-name">菱形網 / 點焊網</div><div class="product-desc">各式鋼網產品，適用圍籬、防護及建築用途</div></div>
       </div>
     </div>
@@ -243,7 +309,7 @@ footer strong{color:#fff;}
     <p class="section-desc">整合多元加工能力，提供從圖面設計到精密製作的完整解決方案。</p>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-img"><img src="photos/不鏽鋼沖孔機.jpg" alt="不鏽鋼沖孔機"></div>
+        <div class="service-img"><img src="photos/不鏽鋼沖孔機.jpg" alt="不鏽鋼沖孔機" loading="lazy"></div>
         <div class="service-body">
           <div class="service-num">01</div>
           <div class="service-title">沖孔加工</div>
@@ -252,7 +318,7 @@ footer strong{color:#fff;}
         </div>
       </div>
       <div class="service-card">
-        <div class="service-img"><img src="photos/30kw激光切割機.jpg" alt="30kW 雷射切割機"></div>
+        <div class="service-img"><img src="photos/30kw激光切割機.jpg" alt="30kW 雷射切割機" loading="lazy"></div>
         <div class="service-body">
           <div class="service-num">02</div>
           <div class="service-title">高功率雷射切割</div>
@@ -261,7 +327,7 @@ footer strong{color:#fff;}
         </div>
       </div>
       <div class="service-card">
-        <div class="service-img"><img src="photos/CNC電離子切割機.jpg" alt="CNC 電離子切割機"></div>
+        <div class="service-img"><img src="photos/CNC電離子切割機.jpg" alt="CNC 電離子切割機" loading="lazy"></div>
         <div class="service-body">
           <div class="service-num">03</div>
           <div class="service-title">電離子 / 火焰切割</div>
@@ -280,14 +346,14 @@ footer strong{color:#fff;}
     <h2 class="section-title">廠區實景</h2>
     <p class="section-desc">走進尚新貿，一覽我們的設備與產品。</p>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="photos/烤漆鐵捲.jpg" alt="烤漆鐵捲"></div>
-      <div class="gallery-item"><img src="photos/白鐵管.jpg" alt="白鐵管"></div>
-      <div class="gallery-item"><img src="photos/萬能角鐵.jpg" alt="萬能角鐵"></div>
-      <div class="gallery-item"><img src="photos/方管.jpg" alt="方管"></div>
-      <div class="gallery-item"><img src="photos/點焊網.jpg" alt="點焊網"></div>
-      <div class="gallery-item"><img src="photos/鋁門窗.jpg" alt="鋁門窗"></div>
-      <div class="gallery-item"><img src="photos/H型鋼.jpg" alt="H型鋼"></div>
-      <div class="gallery-item"><img src="photos/鐵門.jpg" alt="鐵門"></div>
+      <div class="gallery-item"><img src="photos/烤漆鐵捲.jpg" alt="烤漆鐵捲" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/白鐵管.jpg" alt="白鐵管" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/萬能角鐵.jpg" alt="萬能角鐵" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/方管.jpg" alt="方管" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/點焊網.jpg" alt="點焊網" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/鋁門窗.jpg" alt="鋁門窗" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/H型鋼.jpg" alt="H型鋼" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/鐵門.jpg" alt="鐵門" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -319,7 +385,7 @@ footer strong{color:#fff;}
       <a href="mailto:service@ssm-steel.com.tw" style="color:var(--orange);font-size:16px;font-weight:500;text-decoration:none;">service@ssm-steel.com.tw</a>
       <span style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;">
         <span style="font-size:15px;color:var(--text-mid);">LINE 諮詢</span>
-        <a href="https://lin.ee/8VTlXCD"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>
+        <a href="https://lin.ee/8VTlXCD" target="_blank" rel="noopener noreferrer"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0" loading="lazy"></a>
       </span>
     </div>
     <div class="map-grid">
@@ -346,5 +412,27 @@ footer strong{color:#fff;}
   <p style="margin-top:6px;">嘉義縣朴子市 ｜ 精準・踏實・高品質</p>
 </footer>
 
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.querySelector('.nav-links');
+  if(!btn||!menu) return;
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+  });
+  // 點選連結後關閉選單
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', '開啟選單');
+    });
+  });
+})();
+</script>
 </body>
 </html>
