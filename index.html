@@ -170,8 +170,21 @@ footer strong{color:#fff;}
 .line-float{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:8px;background:#06c755;color:#fff;padding:12px 18px 12px 14px;border-radius:50px;box-shadow:0 6px 20px rgba(6,199,85,0.4);text-decoration:none;font-weight:600;font-size:14px;transition:transform 0.2s,box-shadow 0.2s;}
 .line-float:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(6,199,85,0.55);}
 .line-float-icon{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#06c755;font-weight:800;font-size:13px;letter-spacing:-0.5px;}
+/* Floating phone button (mobile only) */
+.phone-float{display:none;}
 @media(max-width:768px){
-  .line-float{padding:10px 14px 10px 12px;font-size:13px;right:14px;bottom:14px;}
+  .line-float{padding:10px 14px 10px 12px;font-size:13px;right:14px;bottom:74px;}
+  .phone-float{
+    display:flex;align-items:center;gap:8px;
+    position:fixed;right:14px;bottom:14px;z-index:200;
+    background:var(--orange);color:#fff;
+    padding:10px 16px 10px 12px;border-radius:50px;
+    box-shadow:0 6px 20px rgba(232,93,26,0.45);
+    text-decoration:none;font-weight:600;font-size:13px;
+    transition:transform 0.2s,box-shadow 0.2s;
+  }
+  .phone-float:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(232,93,26,0.6);}
+  .phone-float-icon{width:26px;height:26px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;}
 }
 
 /* Hamburger */
@@ -400,6 +413,12 @@ footer strong{color:#fff;}
     </div>
   </div>
 </section>
+
+<!-- Floating phone button (mobile only) -->
+<a class="phone-float" href="tel:053707475" aria-label="立即詢價">
+  <span class="phone-float-icon">📞</span>
+  <span>立即詢價</span>
+</a>
 
 <!-- Floating LINE button -->
 <a class="line-float" href="https://lin.ee/8VTlXCD" target="_blank" rel="noopener" aria-label="加入 LINE 好友">
