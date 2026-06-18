@@ -71,7 +71,8 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans TC',sans-serif;color:var(--text-dark);background:#fff;line-height:1.7;}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,35,50,0.97);backdrop-filter:blur(8px);padding:0 5%;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,35,50,0.75);backdrop-filter:blur(8px);padding:0 5%;transition:background 0.3s;}
+nav.scrolled{background:rgba(26,35,50,0.98);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .logo{color:#fff;font-size:18px;font-weight:700;letter-spacing:1px;text-decoration:none;}
 .logo span{color:var(--orange);}
@@ -175,6 +176,19 @@ footer strong{color:#fff;}
 .line-float{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:8px;background:#06c755;color:#fff;padding:12px 18px 12px 14px;border-radius:50px;box-shadow:0 6px 20px rgba(6,199,85,0.4);text-decoration:none;font-weight:600;font-size:14px;transition:transform 0.2s,box-shadow 0.2s;}
 .line-float:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(6,199,85,0.55);}
 .line-float-icon{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#06c755;font-weight:800;font-size:13px;letter-spacing:-0.5px;}
+/* Back to top button */
+.back-to-top{
+  position:fixed;left:20px;bottom:20px;z-index:200;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(26,35,50,0.85);color:#fff;border:1px solid rgba(255,255,255,0.15);
+  font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.3s,transform 0.2s,background 0.2s;
+}
+.back-to-top.visible{opacity:1;pointer-events:auto;}
+.back-to-top:hover{background:var(--steel-light);transform:translateY(-2px);}
+@media(max-width:768px){.back-to-top{left:14px;bottom:14px;}}
 /* Floating phone button (mobile only) */
 .phone-float{display:none;}
 @media(max-width:768px){
@@ -419,6 +433,9 @@ footer strong{color:#fff;}
   </div>
 </section>
 
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="回到頂部">↑</button>
+
 <!-- Floating phone button (mobile only) -->
 <a class="phone-float" href="tel:053707475" aria-label="立即詢價">
   <span class="phone-float-icon">📞</span>
@@ -437,6 +454,20 @@ footer strong{color:#fff;}
 </footer>
 
 <script>
+(function(){
+  // Nav scroll
+  var nav = document.querySelector('nav');
+  // Back to top
+  var top = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    if(nav) nav.classList.toggle('scrolled', y > 60);
+    if(top) top.classList.toggle('visible', y > 400);
+  }, {passive:true});
+  if(top) top.addEventListener('click', function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
 (function(){
   var btn = document.getElementById('hamburger');
   var menu = document.querySelector('.nav-links');
