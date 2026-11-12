@@ -469,6 +469,7 @@ footer strong{color:#fff;}
         <button type="submit" class="form-submit">傳送到 LINE 詢價</button>
         <a class="form-mail" id="mailBtn" href="mailto:service@ssm-steel.com.tw">改用 Email 寄出</a>
       </div>
+      <p id="formNotice" style="display:none;margin-top:14px;padding:10px 14px;background:#e9f9ef;border:1px solid #06c755;border-radius:4px;font-size:14px;color:#1a1a1a;"></p>
     </form>
   </div>
 </section>
@@ -589,7 +590,17 @@ footer strong{color:#fff;}
   f.addEventListener('submit',function(e){
     e.preventDefault();
     if(!valid()) return;
-    window.open('https://line.me/R/oaMessage/%40ssm-steel/?'+encodeURIComponent(build()),'_blank','noopener');
+    var text=build();
+    var mobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    window.open(mobile?'https://line.me/R/oaMessage/%40ssm-steel/?'+encodeURIComponent(text):'https://lin.ee/8VTlXCD','_blank','noopener');
+    try{ if(navigator.clipboard) navigator.clipboard.writeText(text); }catch(err){}
+    var n=document.getElementById('formNotice');
+    if(n){
+      n.style.display='block';
+      n.textContent=mobile
+        ?'已開啟 LINE。若內容沒有自動帶入，詢價內容已複製，請在對話框長按貼上後傳送。'
+        :'詢價內容已複製。請在開啟的 LINE 頁面加入好友後，於對話框貼上（Ctrl+V）並傳送。';
+    }
   });
   m.addEventListener('click',function(e){
     if(!valid()){e.preventDefault();return;}
