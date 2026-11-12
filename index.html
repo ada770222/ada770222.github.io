@@ -172,6 +172,33 @@ section{padding:80px 5%;}
 footer{background:var(--steel);color:rgba(255,255,255,0.6);text-align:center;padding:32px 5%;font-size:13px;}
 footer strong{color:#fff;}
 
+/* LINE CTA / Quote */
+.btn-line{background:#06c755;color:#fff;padding:14px 32px;border-radius:4px;font-size:16px;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.btn-line:hover{background:#05b04b;}
+.service-cta{display:inline-block;margin-top:16px;background:#06c755;color:#fff;padding:8px 16px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.service-cta:hover{background:#05b04b;}
+.quote{background:var(--gray-light);}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:40px;}
+.step{background:#fff;border:1px solid var(--gray-mid);border-radius:8px;padding:20px;border-top:3px solid var(--orange);}
+.step-num{font-size:28px;font-weight:700;color:var(--orange);line-height:1;margin-bottom:8px;}
+.step-title{font-size:16px;font-weight:600;color:var(--steel);margin-bottom:4px;}
+.step-desc{font-size:13px;color:var(--text-mid);line-height:1.7;}
+.quote-form{background:#fff;border:1px solid var(--gray-mid);border-radius:8px;padding:28px;margin-top:32px;}
+.quote-form h3{font-size:18px;color:var(--steel);margin-bottom:4px;}
+.quote-form .hint{font-size:13px;color:var(--text-light);margin-bottom:20px;}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.form-grid label{display:flex;flex-direction:column;font-size:13px;color:var(--text-mid);gap:6px;}
+.form-grid .full{grid-column:1/-1;}
+.form-grid input,.form-grid select,.form-grid textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid #ccc;border-radius:4px;background:#fff;color:var(--text-dark);}
+.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{outline:2px solid var(--orange);border-color:var(--orange);}
+.form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;}
+.form-actions button,.form-actions a{font:inherit;font-size:15px;font-weight:500;padding:12px 24px;border-radius:4px;border:0;cursor:pointer;text-decoration:none;display:inline-block;}
+.form-submit{background:#06c755;color:#fff;}
+.form-submit:hover{background:#05b04b;}
+.form-mail{background:transparent;color:var(--steel);border:1px solid var(--steel) !important;}
+.form-mail:hover{background:var(--gray-light);}
+@media(max-width:768px){.form-grid{grid-template-columns:1fr;}}
+
 /* Floating LINE button */
 .line-float{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:8px;background:#06c755;color:#fff;padding:12px 18px 12px 14px;border-radius:50px;box-shadow:0 6px 20px rgba(6,199,85,0.4);text-decoration:none;font-weight:600;font-size:14px;transition:transform 0.2s,box-shadow 0.2s;}
 .line-float:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(6,199,85,0.55);}
@@ -239,6 +266,7 @@ footer strong{color:#fff;}
       <li><a href="#products">產品材料</a></li>
       <li><a href="#services">加工服務</a></li>
       <li><a href="#gallery">廠區實景</a></li>
+      <li><a href="#quote">詢價流程</a></li>
       <li><a href="#contact">聯絡我們</a></li>
     </ul>
     <a class="nav-cta" href="tel:053707475">立即詢價</a>
@@ -263,6 +291,7 @@ footer strong{color:#fff;}
     </div>
     <div class="hero-btns">
       <a class="btn-primary" href="tel:053707475">📞 立即詢價</a>
+      <a class="btn-line" href="https://lin.ee/8VTlXCD" target="_blank" rel="noopener noreferrer">LINE 傳圖面報價</a>
       <a class="btn-secondary" href="#services">了解加工服務</a>
     </div>
     <div class="hero-stats">
@@ -292,7 +321,7 @@ footer strong{color:#fff;}
         </div>
       </div>
       <div class="about-photo">
-        <img src="photos/公司外牆看板.jpg" alt="尚新貿鋼鐵公司外牆看板" loading="lazy">
+        <img src="photos/公司外牆看板.webp" alt="尚新貿鋼鐵公司外牆看板" loading="lazy">
       </div>
     </div>
   </div>
@@ -306,27 +335,27 @@ footer strong{color:#fff;}
     <p class="section-desc">提供多元鋼材品項，滿足各類工業建築與製造需求。</p>
     <div class="products-grid">
       <div class="product-card">
-        <div class="product-img"><img src="photos/不鏽鋼板.jpg" alt="不鏽鋼板" loading="lazy"></div>
+        <div class="product-img"><img src="photos/不鏽鋼板.webp" alt="不鏽鋼板" loading="lazy"></div>
         <div class="product-info"><div class="product-name">不鏽鋼板</div><div class="product-desc">耐蝕性優異，適用食品、化工、建築等多元場合</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/中厚鐵板1.jpg" alt="中厚鐵板" loading="lazy"></div>
+        <div class="product-img"><img src="photos/中厚鐵板1.webp" alt="中厚鐵板" loading="lazy"></div>
         <div class="product-info"><div class="product-name">中厚鐵板</div><div class="product-desc">強度高、用途廣，適合結構件與機械底座製作</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/白鐵鋼捲.jpg" alt="白鐵鋼捲" loading="lazy"></div>
+        <div class="product-img"><img src="photos/白鐵鋼捲.webp" alt="白鐵鋼捲" loading="lazy"></div>
         <div class="product-info"><div class="product-name">鍍鋅鋼板</div><div class="product-desc">防鏽處理優良，廣泛應用於建築外牆及設備外殼</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/圓管.jpg" alt="圓管" loading="lazy"></div>
+        <div class="product-img"><img src="photos/圓管.webp" alt="圓管" loading="lazy"></div>
         <div class="product-info"><div class="product-name">圓管 / 方管</div><div class="product-desc">多規格尺寸，適用結構、機械及各類製造工程</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/白鐵角鐵.jpg" alt="白鐵角鐵" loading="lazy"></div>
+        <div class="product-img"><img src="photos/白鐵角鐵.webp" alt="白鐵角鐵" loading="lazy"></div>
         <div class="product-info"><div class="product-name">白鐵角鐵 / 小型鋼</div><div class="product-desc">角鐵、槽鐵、扁鐵、圓棒，滿足各類輔助結構需求</div></div>
       </div>
       <div class="product-card">
-        <div class="product-img"><img src="photos/菱形網.jpg" alt="菱形網" loading="lazy"></div>
+        <div class="product-img"><img src="photos/菱形網.webp" alt="菱形網" loading="lazy"></div>
         <div class="product-info"><div class="product-name">菱形網 / 點焊網</div><div class="product-desc">各式鋼網產品，適用圍籬、防護及建築用途</div></div>
       </div>
     </div>
@@ -341,39 +370,43 @@ footer strong{color:#fff;}
     <p class="section-desc">整合多元加工能力，提供從圖面設計到精密製作的完整解決方案。</p>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-img"><img src="photos/不鏽鋼沖孔機.jpg" alt="不鏽鋼沖孔機" loading="lazy"></div>
+        <div class="service-img"><img src="photos/不鏽鋼沖孔機.webp" alt="不鏽鋼沖孔機" loading="lazy"></div>
         <div class="service-body">
           <div class="service-num">01</div>
           <div class="service-title">沖孔加工</div>
           <div class="service-desc">精密沖孔服務，可依圖面製作各種規格孔型，切面整齊乾淨。</div>
           <div class="service-tags"><span class="service-tag">不鏽鋼</span><span class="service-tag">黑鐵</span><span class="service-tag">客製孔型</span></div>
+          <a class="service-cta" href="#quote">傳圖面・線上詢價 →</a>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-img"><img src="photos/30kw激光切割機.jpg" alt="30kW 雷射切割機" loading="lazy"></div>
+        <div class="service-img"><img src="photos/30kw激光切割機.webp" alt="30kW 雷射切割機" loading="lazy"></div>
         <div class="service-body">
           <div class="service-num">02</div>
           <div class="service-title">高功率雷射切割</div>
           <div class="service-desc">配備 30kW 高功率雷射切割機，各種厚度鋼材切面乾淨俐落、無毛邊。</div>
           <div class="service-tags"><span class="service-tag">30kW</span><span class="service-tag">精密切割</span><span class="service-tag">無毛邊</span></div>
+          <a class="service-cta" href="#quote">傳圖面・線上詢價 →</a>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-img"><img src="photos/CNC電離子切割機.jpg" alt="CNC 電離子切割機" loading="lazy"></div>
+        <div class="service-img"><img src="photos/CNC電離子切割機.webp" alt="CNC 電離子切割機" loading="lazy"></div>
         <div class="service-body">
           <div class="service-num">03</div>
           <div class="service-title">電離子 / 火焰切割</div>
           <div class="service-desc">適用中厚板及大尺寸鋼材，彈性因應各種厚度與材質需求。</div>
           <div class="service-tags"><span class="service-tag">中厚板</span><span class="service-tag">大尺寸</span><span class="service-tag">高效率</span></div>
+          <a class="service-cta" href="#quote">傳圖面・線上詢價 →</a>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-img"><img src="photos/3米折彎機.jpg" alt="TOONG-WOEI CNC折彎機進行鋼板折彎加工" loading="lazy"></div>
+        <div class="service-img"><img src="photos/3米折彎機.webp" alt="TOONG-WOEI CNC折彎機進行鋼板折彎加工" loading="lazy"></div>
         <div class="service-body">
           <div class="service-num">04</div>
           <div class="service-title">折彎加工</div>
           <div class="service-desc">廠內配備三台折彎機，可承接碳鋼、不鏽鋼、鍍鋅鋼板等多種材質之折彎需求。依圖面精準控制角度，適合各類結構件、外殼與管槽製作。</div>
           <div class="service-tags"><span class="service-tag">碳鋼</span><span class="service-tag">不鏽鋼</span><span class="service-tag">鍍鋅板</span></div>
+          <a class="service-cta" href="#quote">傳圖面・線上詢價 →</a>
         </div>
       </div>
     </div>
@@ -387,15 +420,56 @@ footer strong{color:#fff;}
     <h2 class="section-title">廠區實景</h2>
     <p class="section-desc">走進尚新貿，一覽我們的設備與產品。</p>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="photos/烤漆鐵捲.jpg" alt="烤漆鐵捲" loading="lazy"></div>
-      <div class="gallery-item"><img src="photos/白鐵管.jpg" alt="白鐵管" loading="lazy"></div>
-      <div class="gallery-item"><img src="photos/萬能角鐵.jpg" alt="萬能角鐵" loading="lazy"></div>
-      <div class="gallery-item"><img src="photos/方管.jpg" alt="方管" loading="lazy"></div>
-      <div class="gallery-item"><img src="photos/點焊網.jpg" alt="點焊網" loading="lazy"></div>
-      <div class="gallery-item"><img src="photos/鋁門窗.jpg" alt="鋁門窗" loading="lazy"></div>
-      <div class="gallery-item"><img src="photos/H型鋼.jpg" alt="H型鋼" loading="lazy"></div>
-      <div class="gallery-item"><img src="photos/鐵門.jpg" alt="鐵門" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/烤漆鐵捲.webp" alt="烤漆鐵捲" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/白鐵管.webp" alt="白鐵管" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/萬能角鐵.webp" alt="萬能角鐵" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/方管.webp" alt="方管" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/點焊網.webp" alt="點焊網" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/鋁門窗.webp" alt="鋁門窗" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/H型鋼.webp" alt="H型鋼" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/鐵門.webp" alt="鐵門" loading="lazy"></div>
     </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote" id="quote">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-label">QUOTE</div>
+    <h2 class="section-title">詢價流程</h2>
+    <p class="section-desc">有圖面或想法都歡迎詢問，最快用 LINE 傳圖給我們。</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-title">傳送圖面</div><div class="step-desc">用 LINE 或 Email 傳圖面；沒有圖面，傳草圖或照片也可以。</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-title">確認規格</div><div class="step-desc">確認材質、厚度、數量與加工方式。</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-title">報價與交期</div><div class="step-desc">我們回覆報價與預計交期，確認後安排加工。</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-title">加工・取貨</div><div class="step-desc">完成後通知您取貨，或另行安排送貨。</div></div>
+    </div>
+    <form class="quote-form" id="quoteForm" novalidate>
+      <h3>填寫需求，一鍵傳到 LINE</h3>
+      <p class="hint">按下按鈕後會開啟 LINE，內容已自動填好，您只要按傳送。圖面請在 LINE 對話中直接上傳。</p>
+      <div class="form-grid">
+        <label>加工項目
+          <select name="service">
+            <option>雷射切割</option><option>折彎加工</option><option>沖孔加工</option>
+            <option>電離子／火焰切割</option><option>鋼材採購</option><option>其他</option>
+          </select>
+        </label>
+        <label>材質
+          <select name="material">
+            <option>碳鋼（黑鐵）</option><option>不鏽鋼</option><option>鍍鋅鋼板</option><option>其他／不確定</option>
+          </select>
+        </label>
+        <label>厚度（mm）<input name="thickness" type="text" inputmode="decimal" placeholder="例如 6"></label>
+        <label>數量<input name="qty" type="text" placeholder="例如 20 片"></label>
+        <label>姓名／公司 *<input name="name" type="text" required autocomplete="name"></label>
+        <label>聯絡電話 *<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label class="full">備註<textarea name="note" rows="3" placeholder="尺寸、交期需求、是否需代客叫料等"></textarea></label>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="form-submit">傳送到 LINE 詢價</button>
+        <a class="form-mail" id="mailBtn" href="mailto:service@ssm-steel.com.tw">改用 Email 寄出</a>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -495,6 +569,31 @@ footer strong{color:#fff;}
       btn.setAttribute('aria-expanded', 'false');
       btn.setAttribute('aria-label', '開啟選單');
     });
+  });
+})();
+(function(){
+  var f=document.getElementById('quoteForm'),m=document.getElementById('mailBtn');
+  if(!f) return;
+  function build(){
+    var d=new FormData(f),g=function(k){return (d.get(k)||'').toString().trim();};
+    return '【官網詢價】\n加工項目：'+g('service')+'\n材質：'+g('material')+
+      '\n厚度：'+(g('thickness')||'未填')+(g('thickness')?' mm':'')+
+      '\n數量：'+(g('qty')||'未填')+'\n姓名／公司：'+g('name')+
+      '\n電話：'+g('phone')+'\n備註：'+(g('note')||'無');
+  }
+  function valid(){
+    if(!f.name.value.trim()||!f.phone.value.trim()){
+      alert('請填寫姓名／公司與聯絡電話');return false;}
+    return true;
+  }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!valid()) return;
+    window.open('https://line.me/R/oaMessage/%40ssm-steel/?'+encodeURIComponent(build()),'_blank','noopener');
+  });
+  m.addEventListener('click',function(e){
+    if(!valid()){e.preventDefault();return;}
+    m.href='mailto:service@ssm-steel.com.tw?subject='+encodeURIComponent('官網詢價')+'&body='+encodeURIComponent(build());
   });
 })();
 </script>
