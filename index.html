@@ -166,6 +166,15 @@ section{padding:80px 5%;}
 .service-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
 .service-tag{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);padding:3px 10px;border-radius:3px;font-size:12px;}
 
+/* CASES */
+.cases{background:var(--gray-light);}
+.cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:48px;}
+.case-card{background:#fff;border:1px solid var(--gray-mid);border-radius:8px;overflow:hidden;}
+.case-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+.case-body{padding:20px;}
+.case-title{font-size:17px;font-weight:600;color:var(--steel);margin-bottom:6px;}
+.case-desc{font-size:14px;color:var(--text-mid);line-height:1.8;}
+
 /* GALLERY */
 .gallery{background:var(--gray-light);}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px;}
@@ -284,6 +293,7 @@ footer strong{color:#fff;}
       <li><a href="#about">關於我們</a></li>
       <li><a href="#products">產品材料</a></li>
       <li><a href="#services">加工服務</a></li>
+      <li><a href="#cases">成品案例</a></li>
       <li><a href="#gallery">廠區實景</a></li>
       <li><a href="#quote">詢價流程</a></li>
       <li><a href="#contact">聯絡我們</a></li>
@@ -429,6 +439,26 @@ footer strong{color:#fff;}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-label">WORKS</div>
+    <h2 class="section-title">成品案例</h2>
+    <p class="section-desc">依客戶圖面加工的實際成品。</p>
+    <div class="cases-grid">
+      <div class="case-card">
+        <img src="photos/case-cutting.webp" alt="碳鋼板件切割鑽孔成品" loading="lazy">
+        <div class="case-body"><div class="case-title">碳鋼板件切割・鑽孔</div><div class="case-desc">依圖面切割並加工孔位，板件尺寸一致，可大量出貨。</div></div>
+      </div>
+      <div class="case-card">
+        <img src="photos/case-bending.webp" alt="不鏽鋼折彎成品" loading="lazy">
+        <div class="case-body"><div class="case-title">不鏽鋼折彎成型</div><div class="case-desc">長條件折彎，角度精準、表面乾淨，適用裝修與設備外殼。</div></div>
+      </div>
+    </div>
+    <p style="margin-top:24px;"><a class="btn-line" href="#quote" style="display:inline-block;">我也要加工，傳圖面詢價</a></p>
   </div>
 </section>
 
