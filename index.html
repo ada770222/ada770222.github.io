@@ -282,6 +282,10 @@ footer strong{color:#fff;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
   .hero-stats{gap:28px;}
 }
+
+/* 無障礙：鍵盤焦點與減少動態 */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
